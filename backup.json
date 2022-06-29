@@ -1,0 +1,84 @@
+[
+  {
+    "cid": 0,
+    "id": "HZn8okGrQtebR6zBHhK-2w",
+    "type": "compare/equal",
+    "pos": [
+      -1407,
+      -1629
+    ],
+    "name": null,
+    "size": [
+      100,
+      21
+    ],
+    "icon": null,
+    "inputs": {
+      "0": {
+        "name": "in 1",
+        "type": "any",
+        "label": null,
+        "locked": null,
+        "pos": null,
+        "round": null,
+        "subNodeId": null,
+        "link": null,
+        "setting": {
+          "exist": false,
+          "nullable": false,
+          "hidden": false
+        },
+        "isOptional": null
+      },
+      "1": {
+        "name": "[in 2]",
+        "type": "any",
+        "label": null,
+        "locked": null,
+        "pos": null,
+        "round": null,
+        "subNodeId": null,
+        "link": null,
+        "setting": {
+          "exist": true,
+          "nullable": true,
+          "hidden": false
+        },
+        "isOptional": null
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "out equal",
+        "type": "boolean",
+        "label": null,
+        "locked": null,
+        "pos": null,
+        "round": null,
+        "subNodeId": null,
+        "links": []
+      },
+      "1": {
+        "name": "out not equal",
+        "type": "boolean",
+        "label": null,
+        "locked": null,
+        "pos": null,
+        "round": null,
+        "subNodeId": null,
+        "links": []
+      }
+    },
+    "settings": {
+      "in 2": {
+        "description": "in 2",
+        "type": "string",
+        "config": null,
+        "value": null
+      }
+    },
+    "properties": {},
+    "flags": {},
+    "_id": "HZn8okGrQtebR6zBHhK-2w"
+  }
+]

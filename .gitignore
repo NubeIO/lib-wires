@@ -10,9 +10,6 @@ frontend/.idea/
 !.vscode/launch.json
 !.vscode/extensions.json
 
-# Binaries for programs and plugins
-*.exe
-*.exe~
 *.dll
 *.so
 *.dylib

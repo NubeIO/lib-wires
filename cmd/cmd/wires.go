@@ -60,7 +60,10 @@ func runRoot(cmd *cobra.Command, args []string) {
 		fmt.Println("token is nil")
 		return
 	}
-	cli.Upload(body, token.Token)
+	ok, _ := cli.Upload(body, token.Token)
+	if ok {
+		fmt.Println("uploaded ok")
+	}
 
 }
 

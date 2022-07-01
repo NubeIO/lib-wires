@@ -8,6 +8,7 @@ import (
 	"github.com/spf13/cobra"
 	"io/ioutil"
 	"os"
+	"path/filepath"
 	"strconv"
 )
 
@@ -32,8 +33,11 @@ func runRoot(cmd *cobra.Command, args []string) {
 	p, _ := strconv.Atoi(rootFlags.port)
 	cli := wirescli.New(rootFlags.ip, p)
 	fmt.Println("ip:", rootFlags.ip, "port:", p)
-
-	file, err := ioutil.ReadFile(rootFlags.file)
+	path, err := os.Getwd()
+	fmt.Println("current path", path)
+	fmt.Println("current path", filepath.FromSlash(path))
+	fmt.Println("try and open file", filepath.FromSlash(rootFlags.file))
+	file, err := ioutil.ReadFile(filepath.FromSlash(rootFlags.file))
 	if err != nil {
 		fmt.Println(err)
 		return

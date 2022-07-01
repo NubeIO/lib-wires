@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/NubeIO/lib-wires/wirescli"
-	pprint "github.com/NubeIO/rubix-assist/pkg/helpers/print"
 	"github.com/spf13/cobra"
 	"io/ioutil"
 	"os"
@@ -50,8 +49,7 @@ func runRoot(cmd *cobra.Command, args []string) {
 	}
 	body.Nodes = nodes
 	body.Pos = []float64{-1250, -1600}
-	token, res := cli.GetToken(&wirescli.WiresTokenBody{Username: rootFlags.user, Password: rootFlags.pass})
-	pprint.PrintJOSN(res)
+	token, _ := cli.GetToken(&wirescli.WiresTokenBody{Username: rootFlags.user, Password: rootFlags.pass})
 	if token == nil {
 		fmt.Println("token body is nil")
 		return
@@ -60,6 +58,7 @@ func runRoot(cmd *cobra.Command, args []string) {
 		fmt.Println("token is nil")
 		return
 	}
+	fmt.Println("token", token.Token)
 	ok, _ := cli.Upload(body, token.Token)
 	if ok {
 		fmt.Println("uploaded ok")
